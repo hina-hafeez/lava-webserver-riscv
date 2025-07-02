@@ -26,7 +26,8 @@ Documentation chronological sequence is as follows.
   
 ## [LAVA Web-Server for RISCV boot and deployment](/docs/LAVA_WebServer_RISCV_Boot.md):
 - Getting Banana PI F3 bootflow ready for kernel CI
-- How to setup U-boot SPL
-- How to setup NFS
-- U-boot enviornment for BPI-F3
-- Building Linux kernel for BPI-F3
+  - How to setup U-boot SPL
+  - How to setup NFS
+  - U-boot enviornment for BPI-F3
+  - Building Linux kernel for BPI-F3
+- LAVA job(.yaml) file using u-boot for booting and linux kernel building
