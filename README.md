@@ -24,10 +24,10 @@ Documentation chronological sequence is as follows.
 - Describes how to add a newer physical board in LAVA worker and then add it in the lava-server
 - Describes how to set up PDU with arduino uno and relays
   
-## [LAVA Web-Server for RISCV boot and deployment](/docs/LAVA_WebServer_RISCV_Boot.md):
-- Getting Banana PI F3 bootflow ready for kernel CI
-  - How to setup U-boot SPL
-  - How to setup NFS
-  - U-boot enviornment for BPI-F3
-  - Building Linux kernel for BPI-F3
-- LAVA job(.yaml) file using u-boot for booting and linux kernel building
+## [LAVA Web-Server for RISCV boot and deployment](/docs/Lava-bpi-f3-bootflow.md):
+- Setting up Banana Pi F3 Boot Flow for Kernel CI
+  - U-Boot Secondary Program Loader (SPL) Setup
+  - U-Boot environment for BPI-F3
+  - Host Machine NFS Server Setup
+  - Booting the Linux kernel on BPI-F3
+- Automating with LAVA Job (.yaml) File
