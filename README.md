@@ -22,4 +22,11 @@ Documentation chronological sequence is as follows.
 ## [Adding RISC-V device (Banana Pi F3)](/docs/ADDING_BPI-F3.md):
 
 - Describes how to add a newer physical board in LAVA worker and then add it in the lava-server
-- Describes how to set up PDU with arduino uno and relays 
+- Describes how to set up PDU with arduino uno and relays
+  
+## [LAVA Web-Server for RISCV boot and deployment](/docs/LAVA_WebServer_RISCV_Boot.md):
+- Getting Banana PI F3 bootflow ready for kernel CI
+- How to setup U-boot SPL
+- How to setup NFS
+- U-boot enviornment for BPI-F3
+- Building Linux kernel for BPI-F3
