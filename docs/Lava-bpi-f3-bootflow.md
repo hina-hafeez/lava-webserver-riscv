@@ -2,17 +2,17 @@
 This document outlines the essential steps to integrate the Banana Pi F3 board into a Kernel CI (Continuous Integration) environment using LAVA (Linaro Automated Validation Architecture). 
 It details the setup required on a host x86 machine to enable LAVA to deploy binaries to the device, initiate booting, and validate the Linux kernel.
 
-## ** U-Boot Secondary Program Loader (SPL) Setup**
+## U-Boot Secondary Program Loader (SPL) Setup
 The first stage bootloader for kernelCI setup is the u-boot SPL (secondary program loader) which remains in the emmc and polls for u-boot proper from the UART Y-modem. 
 It is built separately. It places the u-boot proper at the certain address in the volatile memory and then jumps to it.
 Once the U-Boot proper is running, you can leverage its extensive command set, as described in the **U-Boot environment for BPI-F3**, to load the Linux kernel, often via NFS.
 
-## ** U-Boot environment for BPI-F3**
+## U-Boot environment for BPI-F3
 Upon entering the U-Boot state, a series of commands are executed to configure the necessary U-Boot environment variables. 
 These variables are crucial for network setup, memory addressing, and boot processes.
 Refer to the [u-boot-env](https://github.com/alitariq4589/k1-kernelci-setup/blob/main/u-boot-env.env) for the list of commands.
 
-## ** Host Machine NFS Server Setup**
+## Host Machine NFS Server Setup
 To enable the Banana Pi F3 board to download kernel images and root filesystems via NFS from the host machine, follow these steps to configure your NFS server:
 1. Install NFS server package:
    **sudo apt update **
@@ -37,7 +37,7 @@ To enable the Banana Pi F3 board to download kernel images and root filesystems 
    **sudo systemctl enable nfs-kernel-server**  
    
  
-## **Booting the Linux kernel on BPI-F3
+## Booting the Linux kernel on BPI-F3
 Once the NFS server is successfully configured and running, and the U-Boot environment variables are set (typically after transferring "uboot-opensbi_buildroot.itb" to the board using the Y-modem UART transfer protocol), 
 the system is ready to boot the Linux kernel.
 After the U-Boot proper is loaded, execute the custom U-Boot command **"nfs_boot"** (as defined in u-boot-env.env).
